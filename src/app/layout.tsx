@@ -14,9 +14,9 @@ const geistMono = localFont({
     weight: "100 900",
 });
 const robotoslab = localFont({
-    src: "./fonts/RobotoSlab.ttf",
+    src: "./fonts/RobotoSlab-Black.ttf",
     variable: "--font-roboto-slab",
-    weight: "100 900",
+    weight: "100 600",
 });
 
 export const metadata: Metadata = {
