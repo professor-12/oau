@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 const Header = () => {
     return (
-        <div className="bg-white/30 sticky top-0 backdrop-blur-xl border border-white/10 drop-shadow-lg text-black">
+        <div className="bg-white/30 z-[9999] sticky top-0 backdrop-blur-lg border border-white/10 drop-shadow-lg text-black">
             <div className="max-width justify-between flex items-center">
                 <Logo />
                 <div>

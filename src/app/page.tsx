@@ -1,9 +1,10 @@
+import HeroSection from "@/components/HeroSection";
 import React from "react";
 
 const Home = () => {
     return (
-        <div className="h-screen  text-white max-width">
-
+        <div className="h-screen">
+            <HeroSection />
         </div>
     );
 };

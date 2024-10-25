@@ -18,7 +18,17 @@ const robotoslab = localFont({
     variable: "--font-roboto-slab",
     weight: "100 600",
 });
+const Inter = localFont({
+    src: "./fonts/Inter.woff2",
+    variable: "--font-inter",
+    weight: "100 600",
+});
 
+const abrilfatface = localFont({
+    src: "./fonts/AbrilFatface-Regular.ttf",
+    variable: "--font-abril",
+    weight: "100 900",
+});
 export const metadata: Metadata = {
     title: {
         default: "Obafemi Awolowo",
@@ -36,7 +46,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} relative ${robotoslab.variable}  ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${Inter.variable} ${abrilfatface}  relative ${robotoslab.variable}  ${geistMono.variable} antialiased`}
             >
                 <Header />
                 {children}
