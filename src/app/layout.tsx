@@ -21,13 +21,19 @@ const robotoslab = localFont({
 const Inter = localFont({
     src: "./fonts/Inter.woff2",
     variable: "--font-inter",
-    weight: "100 600",
+    weight: "100 900",
 });
 
 const abrilfatface = localFont({
     src: "./fonts/AbrilFatface-Regular.ttf",
     variable: "--font-abril",
     weight: "100 900",
+});
+
+const interVariable = localFont({
+    src: "./fonts/InterVariable.woff2",
+    variable: "--font-inter-var",
+    weight: "100  900",
 });
 export const metadata: Metadata = {
     title: {
@@ -38,15 +44,21 @@ export const metadata: Metadata = {
         "Obafemi Awolowo University, Ile-Ife is one of three Universities established in Nigeria between 1961 and 1962",
 };
 
+const quicksand = localFont({
+    src: "./fonts/Quicksand-Regular.ttf",
+    variable: "--font-quicksand",
+    weight: "100 500",
+});
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    console.log(interVariable.variable);
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${Inter.variable} ${abrilfatface}  relative ${robotoslab.variable}  ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${interVariable.variable} ${quicksand.variable} ${Inter.variable} ${abrilfatface.variable}   ${robotoslab.variable}  ${geistMono.variable} antialiased `}
             >
                 <Header />
                 {children}

@@ -1,24 +1,22 @@
 import React from "react";
 import Logo from "./Logo";
+import { Menu, Notification } from "@/app/lib/svgs";
 
 const Header = () => {
     return (
-        <div className="bg-white/30 z-[9999] sticky top-0 backdrop-blur-lg border border-white/10 drop-shadow-lg text-black">
+        <div className="bg-white/20 z-[9999] fixed  right-0 left-0 top-0 backdrop-blur-lg border border-white/10 drop-shadow-lg text-black">
             <div className="max-width justify-between flex items-center">
                 <Logo />
-                <div>
-                    <svg
-                        stroke="currentColor"
-                        fill="currentColor"
-                        strokeWidth="0"
-                        className="cursor-pointer"
-                        viewBox="0 0 24 24"
-                        height="2em"
-                        width="2em"
-                        xmlns="http://www.w3.org/2000/svg"
+                <div className="flex items-center gap-6">
+                    <div className="" title="menu">
+                        <Menu />
+                    </div>
+                    <div
+                        title="notification"
+                        className="relative cursor-pointer"
                     >
-                        <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
-                    </svg>
+                        <Notification />
+                    </div>
                 </div>
             </div>
         </div>
