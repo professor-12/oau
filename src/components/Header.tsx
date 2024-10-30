@@ -4,7 +4,7 @@ import { Menu, Notification } from "@/app/lib/svgs";
 
 const Header = () => {
     return (
-        <div className="bg-white/20 z-[9999] fixed  right-0 left-0 top-0 backdrop-blur-lg border border-white/10 drop-shadow-lg text-black">
+        <div className="bg-white/20   z-[9999] fixed  right-0 left-0 top-0 backdrop-blur-lg border border-slate-500/20 drop-shadow-lg text-black">
             <div className="max-width justify-between flex items-center">
                 <Logo />
                 <div className="flex items-center gap-6">

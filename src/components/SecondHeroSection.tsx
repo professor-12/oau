@@ -7,7 +7,7 @@ const SecondHeroSection = () => {
     const { scrollYProgress } = useScroll();
     const value = useTransform(
         scrollYProgress,
-        [0, 0.5, 0.8, 1],
+        [0, 0.5, 0.8, 1], 
         [0.8, 1, 1, 0.8]
     );
     return (
@@ -41,10 +41,12 @@ const SecondHeroSection = () => {
                                         height={600}
                                     />
                                 </div>
-                                <h1 className="text-xl p-6 px-3">
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing{" "}
-                                </h1>
+                                <div className="p-6 px-3">
+                                    <h1 className="text-xl font-semibold">
+                                        Under graduates
+                                    </h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas ducimus in voluptate, nemo quam magnam, nihil consequuntur quos dicta sapiente id, cupiditate eligendi obcaecati impedit ullam! Delectus, pariatur ipsum!</p>
+                                </div>
                             </div>
                         );
                     })}
