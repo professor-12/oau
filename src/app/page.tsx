@@ -5,14 +5,14 @@ import SecondHeroSection from "@/components/SecondHeroSection";
 import React from "react";
 
 const Home = () => {
-    console.log('Home')
+
     return (
         <div className="">
             <div
                 aria-hidden
-                className="w-[40rem] h-[40rem] bg-gradient-to-br from-transparent to-indigo-600 via-violet-00 blur-[100px] absolute top-20 left-0"
+                className="w-[25rem] h-[25rem] bg-gradient-to-br from-transparent to-indigo-600 via-violet-00 blur-[150px] absolute top-40 left-0"
             ></div>
-            <HeroSection /> 
+            <HeroSection />
             <SecondHeroSection />
             <AboutUs />
             <Footer />

@@ -27,24 +27,24 @@ const HeroSection = () => {
     const x = useTransform(scrollYProgress, [0, 1], [1, 0.1]);
     console.log(scrollYProgress);
     return (
-        <div className="bg-indigo-700/30 h-screen border-indigo-300/40 ">
-            <div className="max-width  py-24   gap-6">
+        <div className="h-screen flex items-center justify-center">
+            <div className="max-width    gap-6">
                 <div className="text-center  space-y-8 font-[family-name:var(--font-inter-var)] w-full">
-                    <motion.h1 className="text-7xl font-[family-name:var(--font-inter-var)]  text-white font-semibold">
+                    <motion.h1 className="text-7xl font-[family-name:var(--font-inter-var)]  text-[#0F172A]  font-semibold">
                         <motion.span className="font-[family-name:var(--font-inter-var)]">
                             Obafemi Awolowo{" "}
                         </motion.span>
-                        <motion.span className="text-[white]">
+                        <motion.span className="">
                             University
                         </motion.span>
                     </motion.h1>
-                    <p className="text-white text-lg mt-4">
+                    <p className=" text-lg mt-4 text-slate-800/70">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Voluptatem illum iure officia debitis accusantium
                         exceptu
                     </p>
 
-                    <div className="flex  space-y-3 justify-center items-center p-5 rounded-xl bg-indigo-700/30 border-indigo-300/40 border  h-[17rem]">
+                    <div className="flex  space-y-3 justify-center items-center p-5 rounded-xl bg-indigo-700/60 border-indigo-700/10 border  h-[17rem]">
                         <motion.p
                             style={{ scaleX: x }}
                             className="lg:text-[4.6rem] space-x-2 text-xl lg:space-x-5 text-center font-semibold"

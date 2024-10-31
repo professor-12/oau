@@ -7,11 +7,12 @@ const SecondHeroSection = () => {
     const { scrollYProgress } = useScroll();
     const value = useTransform(
         scrollYProgress,
-        [0, 0.5, 0.8, 1], 
+        [0, 0.5, 0.8, 1],
         [0.8, 1, 1, 0.8]
     );
     return (
-        <div className=" p-0 space-y-7  bg-white  py-12 bg-no-repeat object-cover w-full">
+        <div className=" p-0 space-y-7 relative  bg-white  py-12 bg-no-repeat object-cover w-full">
+            <Image src="/svg/Bg.svg" className="absolute -z-1" width={200} height={200} alt="" />
             <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 200 }}
