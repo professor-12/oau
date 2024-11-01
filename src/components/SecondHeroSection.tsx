@@ -3,6 +3,20 @@ import Image from "next/image";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+
+const studyAtOau = [
+    {
+        image: "", title: "Undergraduate Admissions", body: "Whatever you want from your University experience, you will find it at Obafemi Awolowo University.Learn more about our Undergraduate Program."
+    },
+    {
+        image: "", title: "Graduate Admissions", body: "Ready to prepare for professional life, boost your career, push yourself to new frontiers of knowledge by enrolling in any of our Postgraduate Programs."
+
+    },
+    {
+        image: "", title: "Continuing Education", body: "We strive to reach out to diverse populations and varying student profiles with challenging, and rewarding programs to enhance employability and professionalism."
+    },
+
+]
 const SecondHeroSection = () => {
     const { scrollYProgress } = useScroll();
     const value = useTransform(
@@ -27,7 +41,7 @@ const SecondHeroSection = () => {
                     animate={{ opacity: 1 }}
                     className="grid gap-6 lg:grid-cols-3"
                 >
-                    {new Array(3).fill(null).map((_, index) => {
+                    {studyAtOau.map(({ body, image, title }, index) => {
                         return (
                             <div
                                 key={index}
@@ -44,9 +58,9 @@ const SecondHeroSection = () => {
                                 </div>
                                 <div className="p-6 px-3">
                                     <h1 className="text-xl font-semibold">
-                                        Under graduates
+                                        {title}
                                     </h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas ducimus in voluptate, nemo quam magnam, nihil consequuntur quos dicta sapiente id, cupiditate eligendi obcaecati impedit ullam! Delectus, pariatur ipsum!</p>
+                                    <p>{body}</p>
                                 </div>
                             </div>
                         );
