@@ -18,24 +18,19 @@ const studyAtOau = [
 
 ]
 const SecondHeroSection = () => {
-    const { scrollYProgress } = useScroll();
-    const value = useTransform(
-        scrollYProgress,
-        [0, 0.5, 0.8, 1],
-        [0.8, 1, 1, 0.8]
-    );
+
     return (
-        <div className=" p-0 space-y-7 relative  bg-white  py-12 bg-no-repeat object-cover w-full">
+        <div className=" p-0 space-y-7 relative  bg-white  py-[6rem] bg-no-repeat object-cover w-full">
             <Image src="/svg/Bg.svg" className="absolute -z-1" width={200} height={200} alt="" />
             <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 200 }}
-                transition={{ duration: 0.4 }}
-                className="text-center text-slate-700 font-[family-name:var(--font-quicksand)] text-5xl mb-4 font-semibold "
+                transition={{ duration: 0.5 }}
+                className="text-center text-slate-700 font-[family-name:var(--font-quicksand)] text-5xl mb-4 font-semibold"
             >
-                Study at OAU
+                Studying at OAU
             </motion.h1>
-            <motion.div style={{ scaleX: value }} className="max-width">
+            <motion.div className="max-width">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -43,7 +38,9 @@ const SecondHeroSection = () => {
                 >
                     {studyAtOau.map(({ body, image, title }, index) => {
                         return (
-                            <div
+                            <motion.div
+                                whileInView={{ y: [-100, 0], opacity: [0, 1], transition: { duration: .3 } }}
+
                                 key={index}
                                 className="shadow border hover:scale-105 duration-500 transition-all cursor-default rounded-lg"
                             >
@@ -56,13 +53,13 @@ const SecondHeroSection = () => {
                                         height={600}
                                     />
                                 </div>
-                                <div className="p-6 px-3">
-                                    <h1 className="text-xl font-semibold">
+                                <div className="p-7 px-4">
+                                    <h1 className="text-xl text-slate-800 font-semibold">
                                         {title}
                                     </h1>
                                     <p>{body}</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </motion.div>

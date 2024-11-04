@@ -8,15 +8,15 @@ import useTextAnimation, { listofWords } from "@/hooks/useTextAnimation";
 
 const HeroSection = () => {
     const containerVariants = {
-        hidden: { opacity: 0, y: -100 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                staggerChildren: 0.1,
-            },
+    hidden: { opacity: 0, y: -100 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            staggerChildren: 0.1,
         },
-    };
+    },
+};
     const itemVariants = {
         hidden: { opacity: 0, y: -200 },
         visible: { opacity: 1, y: 0 },

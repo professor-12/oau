@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./globals.css"
+import { Astloch } from "next/font/google"
 import Header from "@/components/Header";
-import {  } from "next/font"
+
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
     variable: "--font-geist-sans",
@@ -18,6 +19,9 @@ const robotoslab = localFont({
     variable: "--font-roboto-slab",
     weight: "100 600",
 });
+
+
+
 const Inter = localFont({
     src: "./fonts/Inter.woff2",
     variable: "--font-inter",
@@ -58,7 +62,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${interVariable.variable} ${quicksand.variable} ${Inter.variable} ${abrilfatface.variable}   ${robotoslab.variable}  ${geistMono.variable} antialiased `}
+                className={`${geistSans.variable} ${interVariable.variable} ${quicksand.variable}  ${Inter.variable} ${abrilfatface.variable}   ${robotoslab.variable}  ${geistMono.variable} antialiased `}
             >
                 <Header />
                 {children}

@@ -4,7 +4,7 @@ import React from "react";
 const Logo = () => {
     return (
         <div className="flex items-center gap-4">
-            <Image src={"/oaulogo.png"} alt="Oau Logo" width={70} height={70} />
+            <Image src={"/oaulogo.png"} alt="Oau Logo" width={60} height={60} />
             {/* <h1 className="tracking-wider font-light text-white/80  text-lg font-[family-name:var(--font-roboto-slab)]">
                 Obafemi Awolowo University
             </h1> */}
