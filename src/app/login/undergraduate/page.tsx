@@ -1,8 +1,9 @@
-import React from 'react'
+import Login, { Type } from '@/components/Login'
+import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react'
 
 const UndergraduatePage = () => {
       return (
-            <div>UndergraduatePage</div>
+            <Login type={Type.UNDERGRADUATE} />
       )
 }
 
