@@ -57,7 +57,7 @@ const SecondHeroSection = () => {
                                     <h1 className="text-xl text-slate-800 font-semibold">
                                         {title}
                                     </h1>
-                                    <p>{body}</p>
+                                    <p className="text-sm">{body}</p>
                                 </div>
                             </motion.div>
                         );

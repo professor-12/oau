@@ -1,12 +1,11 @@
+"use client"
 import React from 'react'
 import CustomInput from './CustomInput'
+import { login_undergraduate } from '@/app/actions/undergraduate-login.action'
+import { useFormState } from 'react-dom'
+import { Type } from '@/app/types/enum'
 
-export enum Type {
-      MBA,
-      UNDERGRADUATE,
-      STAFF,
-      BURSARY,
-}
+
 
 
 const constant = {
@@ -17,19 +16,20 @@ const constant = {
 }
 
 const Login = ({ type }: { type: Type }) => {
+      // const [state, formAction] = useFormState(login_undergraduate, null)
 
       return (
-            <form name="frmStudent" action={constant[type]?.url ?? "https://eportal.oauife.edu.ng/login1.php"} method='POST' className='text-black w-[80%] space-y-7'>
+            <form name="frmStudent" action={constant[type].url} method='POST' className='text-black w-[80%] space-y-7'>
                   <h1 className='text-3xl font-semibold'>Login</h1>
                   <div className='space-y-5 font-normal'>
                         <CustomInput name='user_id' id='user_id' label={constant[type]?.label ?? "Student Matric number"} placeholder={constant[type].placeholder} labelClassName='text-sm' />
                         <CustomInput name='pswd' id="password" label={"Password"} labelClassName='text-sm' type='password' placeholder='*****' />
                         <div className='sm:flex max-sm:space-y-3  gap-3 items-center'>
                               <div className='space-y-2 flex-1'>
-                                    <label htmlFor="password">Session</label>
-                                    <select name="SessionF" id='password' className='w-full p-2 text-sm border border-slate-400/60 rounded-md outline-none'>
-                                          <option value="">Select Session</option>
-                                          <option value="2023">2023/2024</option>
+                                    <label htmlFor="SessionF">Session</label>
+                                    <select name="SessionF" className='w-full p-2 text-sm border border-slate-400/60 rounded-md outline-none' id="SessionF">
+                                          <option>Select Session</option>
+                                          <option selected="" value="2023">2023/2024</option>
                                           <option value="2022">2022/2023</option>
                                           <option value="2022">2022/2023</option>
                                           <option value="2021">2021/2022</option>
@@ -62,14 +62,16 @@ const Login = ({ type }: { type: Type }) => {
                                           <option value="2007">2007/2008</option>
                                           <option value="2006">2006/2007</option>
                                           <option value="2006">2006/2007</option>
+
                                     </select>
                               </div>
                               <div className='space-y-2 flex-1'>
-                                    <label htmlFor="">Semester</label>
-                                    <select name="SemesterF" className='w-full p-2 border border-slate-400/60 rounded-md text-sm outline-none'>
-                                          <option value="">Select Session</option>
+                                    <label htmlFor="SemesterF">Semester</label>
+                                    <select className='w-full p-2 text-sm border border-slate-400/60 rounded-md outline-none' name="SemesterF" id="SemesterF">
+                                          <option>Select Semester</option>
+                                          <option selected value="1">Harmattan</option>
                                           <option value="2">Rain</option>
-                                          <option value="1">Harmatan</option>
+
                                     </select>
                               </div>
                         </div>

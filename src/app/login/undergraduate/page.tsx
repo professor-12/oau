@@ -1,4 +1,5 @@
-import Login, { Type } from '@/components/Login'
+import { Type } from '@/app/types/enum'
+import Login from '@/components/Login'
 import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react'
 
 const UndergraduatePage = () => {
