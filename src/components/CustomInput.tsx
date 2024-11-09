@@ -9,7 +9,7 @@ const CustomInput = ({ labelClassName, label, labelProp, ...props }: ICustomInpu
 
 
       return <div className='flex flex-col space-y-2'>
-            <label htmlFor={labelProp?.id}>{label}</label>
+            <label htmlFor={props.id}>{label}</label>
             <input   {...props} className='border placeholder:font-normal p-2 w-full rounded-md bg-transparent border-gray-400/60 shadow-sm focus:bg-slate-100/40 focus:outline-none focus:border-blue-400' />
       </div>
 }

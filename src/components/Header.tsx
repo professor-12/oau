@@ -1,17 +1,18 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { animate, AnimatePresence, motion, useAnimate } from "framer-motion";
 import Logo from "./Logo";
 import { Menu, Notification } from "@/app/lib/svgs";
 import DropDownMenu from "./DropDownMenu";
+import Link from "next/link";
 
 const navlinks = [
     {
         title: "Students",
         links: [
-            { name: "Undergraduates", url: "", },
-            { name: "Post graduates", url: "" },
-            { name: "Executive MBA", url: "" },
+            { name: "Undergraduate", url: "/login/undergraduate", },
+            { name: "Post graduate", url: "/login/postgraduate" },
+            { name: "Executive MBA", url: "/login/mbalogin" },
         ],
     },
     {
@@ -19,15 +20,16 @@ const navlinks = [
         links: [
             {
                 name: "Staff Login",
-                url: "",
+                url: "/login/staff",
             },
-            { name: "Bursary", url: "" },
+            { name: "Bursary", url: "bursary" },
 
         ],
     },
 ];
 
 const Header = () => {
+
     const [selected, setSelected] = useState<null | number>(null);
     return (
         <div className="bg-white/20   z-[9999] fixed  right-0 left-0 top-0 backdrop-blur-lg border border-slate-500/20 drop-shadow-lg text-black">
@@ -59,13 +61,17 @@ const Header = () => {
                         }
                         <AnimatePresence mode="wait">
                             {selected !== null &&
-                                <motion.div animate={{ y: 0, opacity: 1 }} initial={{ y: 12, opacity: 0 }} exit={{ y: 12, opacity: 0 }} className="absolute top-[calc(100%_+_2rem)]    p-4 text-center bg-neutral-100 border flex flex-col rounded-lg space-y-4 ">
+                                <motion.div animate={{ y: 0, opacity: 1 }} initial={{ y: 12, opacity: 0 }} exit={{ y: 12, opacity: 0 }} className="absolute top-[calc(100%_+_2rem)]  w-full  p-4 text-center bg-neutral-100 border flex flex-col rounded-lg space-y-4 ">
                                     {
                                         navlinks[selected].title &&
                                         <motion.div exit={{ x: 12, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="flex flex-col text-sm gap-3">
                                             {
-                                                navlinks[selected]?.links?.map(({ name }) => {
-                                                    return <span className="cursor-pointer" key={name}>{name}</span>
+                                                navlinks[selected]?.links?.map(({ name, url }) => {
+                                                    return <Link href={url}>
+                                                        <span className="cursor-pointer hover:text-slate-500" key={name}>
+                                                            {name}
+                                                        </span>
+                                                    </Link>
                                                 })
                                             }
                                         </motion.div>
@@ -76,7 +82,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

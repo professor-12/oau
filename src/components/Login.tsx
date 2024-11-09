@@ -5,7 +5,7 @@ export enum Type {
       MBA,
       UNDERGRADUATE,
       STAFF,
-      BURSARY
+      BURSARY,
 }
 
 
@@ -22,12 +22,12 @@ const Login = ({ type }: { type: Type }) => {
             <form name="frmStudent" action={constant[type]?.url ?? "https://eportal.oauife.edu.ng/login1.php"} method='POST' className='text-black w-[80%] space-y-7'>
                   <h1 className='text-3xl font-semibold'>Login</h1>
                   <div className='space-y-5 font-normal'>
-                        <CustomInput name='user_id' label={constant[type]?.label ?? "Student Matric number"} placeholder={constant[type].placeholder} labelClassName='text-sm' />
-                        <CustomInput name='pswd' label={"Password"} labelClassName='text-sm' type='password' placeholder='*****' />
-                        <div className='md:flex gap-3 items-center'>
-                              <div className='space-y-2'>
-                                    <label htmlFor="">Session</label>
-                                    <select name="SessionF" className='w-full p-2 border border-slate-400/60 rounded-md outline-none'>
+                        <CustomInput name='user_id' id='user_id' label={constant[type]?.label ?? "Student Matric number"} placeholder={constant[type].placeholder} labelClassName='text-sm' />
+                        <CustomInput name='pswd' id="password" label={"Password"} labelClassName='text-sm' type='password' placeholder='*****' />
+                        <div className='sm:flex max-sm:space-y-3  gap-3 items-center'>
+                              <div className='space-y-2 flex-1'>
+                                    <label htmlFor="password">Session</label>
+                                    <select name="SessionF" id='password' className='w-full p-2 text-sm border border-slate-400/60 rounded-md outline-none'>
                                           <option value="">Select Session</option>
                                           <option value="2023">2023/2024</option>
                                           <option value="2022">2022/2023</option>
@@ -64,9 +64,9 @@ const Login = ({ type }: { type: Type }) => {
                                           <option value="2006">2006/2007</option>
                                     </select>
                               </div>
-                              <div className='space-y-2'>
-                                    <label htmlFor="">Semester *</label>
-                                    <select name="SemesterF" className='w-full p-2 border border-slate-400/60 rounded-md outline-none'>
+                              <div className='space-y-2 flex-1'>
+                                    <label htmlFor="">Semester</label>
+                                    <select name="SemesterF" className='w-full p-2 border border-slate-400/60 rounded-md text-sm outline-none'>
                                           <option value="">Select Session</option>
                                           <option value="2">Rain</option>
                                           <option value="1">Harmatan</option>
