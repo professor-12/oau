@@ -64,7 +64,6 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${interVariable.variable} ${quicksand.variable}  ${Inter.variable} ${abrilfatface.variable}   ${robotoslab.variable}  ${geistMono.variable} antialiased `}
             >
-                <Header />
                 {children}
             </body>
         </html>
