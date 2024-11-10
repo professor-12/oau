@@ -26,7 +26,38 @@ const navlinks = [
 
         ],
     },
-];
+    {
+        title: "Quick Links",
+        links: [
+            {
+                name: "FAQ",
+                url: "/home/#faq",
+            },
+            { name: "Transcript", url: "/login/undergradaute" },
+            {
+                name: "Diploma",
+                url: "http://eportal.oauife.edu.ng/advertnformlgsdiploma.pdf",
+            },
+            {
+                name: "Change of course form",
+                url: "http://eportal.oauife.edu.ng/ChangeOfCourseForm2021.pdf",
+            },
+            {
+                name: "Computer Training",
+                url: "http://eportal.oauife.edu.ng/ChangeOfCourseForm2021.pdf",
+            },
+            {
+                name: "Medical Services",
+                url: "/health-center",
+            },
+            {
+                name: "Fill PG Starter form",
+                url: "http://eportal.oauife.edu.ng/ChangeOfCourseForm2021.pdf",
+            },
+
+        ],
+    },
+] as const;
 
 const Header = () => {
 
@@ -61,7 +92,7 @@ const Header = () => {
                         }
                         <AnimatePresence mode="wait">
                             {selected !== null &&
-                                <motion.div animate={{ y: 0, opacity: 1 }} initial={{ y: 12, opacity: 0 }} exit={{ y: 12, opacity: 0 }} className="absolute top-[calc(100%_+_2rem)]  w-full  p-4 text-center bg-neutral-100 border flex flex-col rounded-lg space-y-4 ">
+                                <motion.div animate={{ y: 0, opacity: 1 }} initial={{ y: 12, opacity: 0 }} exit={{ y: 12, opacity: 0 }} className="absolute top-[calc(100%_+_2rem)] mx-auto max-w-full  p-4 text-center bg-neutral-100 border flex flex-col rounded-lg space-y-4 ">
                                     {
                                         navlinks[selected].title &&
                                         <motion.div exit={{ x: 12, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="flex flex-col text-sm gap-3">

@@ -9,7 +9,7 @@ import Link from 'next/link'
 const HealthCenter = ({ searchParams }: { searchParams: { [key: string]: string } }) => {
       const params = searchParams.type ?? ""
       return (
-            <div className='mx-auto overflow-hidden  w-[78%] lg:w-[50%] '>
+            <div className='mx-auto overflow-hidden  w-[78%] lg:w-[42%] '>
                   {
                         params == "staff" ? <FirstLogin /> : <SecondLogin />
                   }
@@ -40,7 +40,7 @@ const FirstLogin = () => {
 const SecondLogin = () => {
       return (
             <motion.div initial={{ x: 700 }} animate={{ x: 0 }}>
-                  <form enctype="multipart/form-data" method='post' action="https://eportal.oauife.edu.ng/hrss_staff_entry.php" className='p-3 space-y-4'>
+                  <form method='post' action="https://eportal.oauife.edu.ng/hrss_staff_entry.php" className='p-3 space-y-4'>
                         <h1 className='text-3xl'>Staff Health Center Registration</h1>
                         <div className='space-y-2 flex-1'>
                               <label htmlFor="category">Patient Category</label>

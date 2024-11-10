@@ -1,4 +1,5 @@
-import AboutUs from "@/components/AboutUs";
+// import AboutUs from "@/components/AboutUs";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import SecondHeroSection from "@/components/SecondHeroSection";
@@ -14,7 +15,8 @@ const Home = () => {
                   ></div>
                   <HeroSection />
                   <SecondHeroSection />
-                  <AboutUs />
+                  {/* <AboutUs /> */}
+                  <FAQ />
                   <Footer />
             </div>
       );
