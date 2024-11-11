@@ -6,14 +6,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const studyAtOau = [
     {
-        image: "", title: "Undergraduate Admissions", body: "Whatever you want from your University experience, you will find it at Obafemi Awolowo University.Learn more about our Undergraduate Program."
+        image: "/oautrends.jpg", title: "Undergraduate Admissions", body: "Whatever you want from your University experience, you will find it at Obafemi Awolowo University.Learn more about our Undergraduate Program."
     },
     {
-        image: "", title: "Graduate Admissions", body: "Ready to prepare for professional life, boost your career, push yourself to new frontiers of knowledge by enrolling in any of our Postgraduate Programs."
+        image: "/oauimage.jpeg", title: "Graduate Admissions", body: "Ready to prepare for professional life, boost your career, push yourself to new frontiers of knowledge by enrolling in any of our Postgraduate Programs."
 
     },
     {
-        image: "", title: "Continuing Education", body: "We strive to reach out to diverse populations and varying student profiles with challenging, and rewarding programs to enhance employability and professionalism."
+        image: "/student-10-480x299.jpg", title: "Continuing Education", body: "We strive to reach out to diverse populations and varying student profiles with challenging, and rewarding programs to enhance employability and professionalism."
     },
 
 ]
@@ -26,7 +26,7 @@ const SecondHeroSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 200 }}
                 transition={{ duration: 0.5 }}
-                className="text-center text-slate-700 font-[family-name:var(--font-quicksand)] text-5xl mb-4 font-semibold"
+                className="text-center text-slate-700 font-[family-name:var(--font-quicksand)] text-3xl md:text-5xl mb-4 font-semibold"
             >
                 Studying at OAU
             </motion.h1>
@@ -44,20 +44,21 @@ const SecondHeroSection = () => {
                                 key={index}
                                 className="shadow border hover:scale-105 duration-500 transition-all cursor-default rounded-lg"
                             >
-                                <div>
+                                <div className="relative">
                                     <Image
-                                        src="/image.png"
-                                        className=""
+                                        src={image}
+                                        className="object-cover w-full aspect-video"
                                         alt=""
-                                        width={600}
-                                        height={600}
+                                        width={400}
+
+                                        height={400}
                                     />
                                 </div>
                                 <div className="p-7 px-4">
                                     <h1 className="text-xl text-slate-800 font-semibold">
                                         {title}
                                     </h1>
-                                    <p className="text-sm">{body}</p>
+                                    <p className="text-sm max-md:text-xs">{body}</p>
                                 </div>
                             </motion.div>
                         );

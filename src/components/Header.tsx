@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { animate, AnimatePresence, motion, useAnimate } from "framer-motion";
 import Logo from "./Logo";
 import { Menu, Notification } from "@/app/lib/svgs";
@@ -60,6 +60,13 @@ const navlinks = [
 ] as const;
 
 const Header = () => {
+    const [x, setX] = useState(null) as any
+    const leftPositionofWrappingDiv = document.getElementById("wrapperdiv")!?.getBoundingClientRect().left
+    const handleHoverEffectDropDown = (index: number, e: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => {
+        setSelected(index)
+        const dropDown = document.getElementById(`${index}rect`)!?.getBoundingClientRect().left
+        setX(dropDown - leftPositionofWrappingDiv)
+    }
 
     const [selected, setSelected] = useState<null | number>(null);
     return (
@@ -69,12 +76,12 @@ const Header = () => {
                     <Logo />
                 </div>
                 <div className="flex items-center gap-8">
-                    <div onMouseLeave={() => setSelected(null)} className="flex gap-12 items-center text-lg relative">
+                    <div id="wrapperdiv" onMouseLeave={() => setSelected(null)} className="flex gap-12 items-center  text-lg relative">
                         <Bridge />
                         {
                             navlinks.map(({ links, title }, indx) => (
 
-                                <p onMouseEnter={() => { setSelected(indx) }} key={title} className="text-gray-600 flex items-center gap-3 cursor-pointer">
+                                <p id={indx + "rect"} onMouseEnter={(e) => handleHoverEffectDropDown(indx, e)} key={title} className="text-gray-600 flex items-center gap-3 cursor-pointer">
                                     <span>{title}</span>
                                     <svg
                                         className={`${selected === indx ? "" : "rotate-180"} duration-200 transition-all`}
@@ -92,7 +99,7 @@ const Header = () => {
                         }
                         <AnimatePresence mode="wait">
                             {selected !== null &&
-                                <motion.div animate={{ y: 0, opacity: 1 }} initial={{ y: 12, opacity: 0 }} exit={{ y: 12, opacity: 0 }} className="absolute top-[calc(100%_+_2rem)] mx-auto max-w-full  p-4 text-center bg-neutral-100 border flex flex-col rounded-lg space-y-4 ">
+                                <motion.div style={{ x, translateX: "-50%" }} id="d" animate={{ y: 0, opacity: 1 }} initial={{ y: 12, opacity: 0 }} exit={{ y: 12, opacity: 0 }} className="absolute transition-all duration-300  left-12 top-[calc(100%_+_2rem)] mx-auto max-w-full  p-4 text-center bg-neutral-100 border flex flex-col rounded-lg space-y-4 ">
                                     {
                                         navlinks[selected].title &&
                                         <motion.div exit={{ x: 12, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="flex flex-col text-sm gap-3">
