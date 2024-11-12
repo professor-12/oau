@@ -65,6 +65,7 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${interVariable.variable} ${quicksand.variable}  ${Inter.variable} ${abrilfatface.variable}   ${robotoslab.variable}  ${geistMono.variable} antialiased `}
             >
                 {children}
+                <div id="portal"></div>
             </body>
         </html>
     );
