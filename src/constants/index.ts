@@ -2,7 +2,7 @@ export const footerLink = [
     {
         title: "Students",
         children: [
-            { name: "Undergraduate", links: "/login/undergradaute" },
+            { name: "Undergraduate", links: "/login/undergraduate" },
             { name: "Postgraduate", links: "/login/postgraduate" },
             { name: "Executive mba", links: "/login/mbalogin" },
         ],
@@ -45,7 +45,7 @@ export const footerLink = [
         children: [
             {
                 name: "Newly Admiatted Student Login",
-                links: "/login/undergradaute",
+                links: "/login/undergraduate",
             },
             {
                 name: "Rules and regualtion for accomodation in hall of residence",

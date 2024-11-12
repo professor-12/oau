@@ -14,7 +14,7 @@ const ForgotPassword = () => {
       }
       return (
             <>
-                  <span onClick={handleOpenModal} className='text-xs text-blue-500 text-right block'>Forgot Password?</span>
+                  <span onClick={handleOpenModal} className='text-xs cursor-pointer text-blue-500 text-right block'>Forgot Password?</span>
                   {
                         openModal && <Modal onPress={handleCloseModal}>
                               <ForgotPasswordModal />
@@ -43,6 +43,6 @@ const ForgotPasswordModal = () => {
                   if (!value) return
                   router.push(`/login/forgot-password/?type=${value}`)
 
-            }} className='bg-blue-500 py-3 text-white rounded text-center w-full ' >Next</button>
+            }} className='bg-blue-500 py-3 text-white rounded text-center w-full' >Next</button>
       </div>)
 }

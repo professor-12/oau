@@ -9,14 +9,13 @@ import Link from 'next/link'
 const HealthCenter = ({ searchParams }: { searchParams: { [key: string]: string } }) => {
       const params = searchParams.type ?? ""
       return (
-            <div className='mx-auto overflow-hidden  w-[78%] lg:w-[42%] '>
+            <div className='mx-auto overflow-hidden  w-[70%] lg:w-[42%] '>
                   {
                         params == "staff" ? <FirstLogin /> : <SecondLogin />
                   }
             </div>
       )
 }
-
 export default HealthCenter
 
 

@@ -11,7 +11,7 @@ const ForgotPasswordPage = ({ searchParams }: { searchParams: { type?: string } 
       }
       return (
             <form name="form1" method='post' action={"https://eportal.oauife.edu.ng/passwordretrieval1.php"} className='w-[80%] space-y-5'>
-                  <h1 className='my-2 text-xl'>Password Reset</h1>
+                  <h1 className='my-2 text-xl font-semibold underline'>Password Reset</h1>
                   {
                         (type === "fresher") ?
                               <input required type="text" value={0} name='DOB' className='hidden' />
@@ -21,7 +21,7 @@ const ForgotPasswordPage = ({ searchParams }: { searchParams: { type?: string } 
                                     placeholder='dd/mm/yyyy'
                               />
                   }
-                  <CustomInput required name="jmeno" label='Registeration Number (For Postgraduate students use pg)'
+                  <CustomInput required name="jmeno" label='Registeration Number'
                         type='text'
                         placeholder='Enter jamb Reg. number in uppercase'
                   />

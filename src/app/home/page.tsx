@@ -15,7 +15,6 @@ const Home = () => {
                   ></div>
                   <HeroSection />
                   <SecondHeroSection />
-                  {/* <AboutUs /> */}
                   <FAQ />
                   <Footer />
             </div>

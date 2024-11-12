@@ -8,7 +8,7 @@ import { faq } from '@/constants'
 const FAQ = () => {
       return (
             <section className='py-12' id='faq'>
-                  <div className='w-80% lg:max-width'>
+                  <div className='w-90% lg:max-width'>
                         <h1 className='text-center mb-12 lg:text-4xl text-xl md:text-2xl font-medium'>Questions? and Answers.</h1>
                         <DropDownProvider>
                               {

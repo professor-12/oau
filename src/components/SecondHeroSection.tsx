@@ -34,14 +34,16 @@ const SecondHeroSection = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="grid gap-6 lg:grid-cols-3"
+                    className="grid gap-6 lg:grid-cols-3 lg:px-12"
                 >
                     {studyAtOau.map(({ body, image, title }, index) => {
                         return (
                             <motion.div
-                                whileInView={{ y: [-100, 0], opacity: [0, 1], transition: { duration: .3 } }}
-
+                                initial={{ y: 200, opacity: 0 }}
+                                // animate={{ y: 0, opacity: 1 }}
+                                whileInView={{ y: 0, opacity: 1, transition: { duration: .2, delay: index * .07 } }}
                                 key={index}
+                                viewport={{ once: true, margin: "-200px" }}
                                 className="shadow border hover:scale-105 duration-500 transition-all cursor-default rounded-lg"
                             >
                                 <div className="relative">

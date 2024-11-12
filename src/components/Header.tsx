@@ -61,8 +61,8 @@ const navlinks = [
 
 const Header = () => {
     const [x, setX] = useState(null) as any
-    const leftPositionofWrappingDiv = document.getElementById("wrapperdiv")!?.getBoundingClientRect().left
     const handleHoverEffectDropDown = (index: number, e: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => {
+        const leftPositionofWrappingDiv = document.getElementById("wrapperdiv")!?.getBoundingClientRect().left
         setSelected(index)
         const dropDown = document.getElementById(`${index}rect`)!?.getBoundingClientRect().left
         setX(dropDown - leftPositionofWrappingDiv)
