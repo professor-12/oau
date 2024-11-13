@@ -1,6 +1,15 @@
 import Logo from '@/components/Logo'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import React, { PropsWithChildren } from 'react'
+
+
+export const metadata: Metadata = {
+      title: {
+            default: "Login - Obafemi Awolowo University",
+            template: "%s - Obafemi Awolowo University"
+      }
+}
 
 const AuthLayout = ({ children }: PropsWithChildren) => {
       return (

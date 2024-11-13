@@ -1,7 +1,12 @@
 import CustomInput from '@/components/CustomInput'
+import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 
 import React from 'react'
+
+export const metadata: Metadata = {
+      title: "Forgot Password"
+}
 
 const ForgotPasswordPage = ({ searchParams }: { searchParams: { type?: string } }) => {
       const type = searchParams?.type
