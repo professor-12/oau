@@ -5,8 +5,9 @@ import Logo from "./Logo";
 import { Menu, Notification } from "@/app/lib/svgs";
 import DropDownMenu from "./DropDownMenu";
 import Link from "next/link";
+import MobileNavMenu from "./MobileNavMenu";
 
-const navlinks = [
+export const navlinks = [
     {
         title: "Students",
         links: [
@@ -72,10 +73,11 @@ const Header = () => {
     return (
         <div className="bg-white/20   z-[9999] fixed  right-0 left-0 top-0 backdrop-blur-lg border border-slate-500/20 drop-shadow-lg text-black">
             <div className="max-width justify-between flex items-center">
-                <div className="flex items-center gap-12">
+                <div className="">
                     <Logo />
                 </div>
-                <div className="flex items-center gap-8">
+                <MobileNavMenu />
+                <div className="flex max-md:hidden items-center gap-8">
                     <div id="wrapperdiv" onMouseLeave={() => setSelected(null)} className="flex gap-12 items-center  text-lg relative">
                         <Bridge />
                         {

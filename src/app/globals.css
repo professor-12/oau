@@ -10,13 +10,12 @@
 
 @layer base {
     .max-width {
-        @apply w-[80%] mx-auto p-2 max-w-7xl;
+        @apply w-[90%] lg:w-[80%] mx-auto p-2 max-w-7xl;
     }
 }
 
-* , body {
+*,
+body {
     font-family: var(--font-inter);
     scroll-behavior: smooth;
 }
-
-
