@@ -23,8 +23,8 @@ const HeroSection = () => {
     };
 
     const text = useTextAnimation(listofWords, 7000);
-    const { scrollYProgress } = useScroll();
-    const x = useTransform(scrollYProgress, [0, 1], [1, 0.1]);
+    const { scrollYProgress, scrollY } = useScroll();
+    const x = useTransform(scrollY, [0, 400], [1, 0.01]);
 
     return (
         <div className="h-screen flex items-center justify-center">
@@ -38,14 +38,14 @@ const HeroSection = () => {
                             University
                         </motion.span>
                     </motion.h1>
-                    <p className="md:text-lg  mt-4 text-slate-800/70">
+                    <p className="md:text-lg  mt-4 text-slate-800/70 text-balance">
                         Obafemi Awolowo University (OAU) in Ile-Ife, Nigeria, was established in 1961-62 based on recommendations from a 1959 educational commission led by Sir Eric Ashby. The University’s Provisional Council was formally inaugurated on June 8, 1961, with Chief Rotimi Williams as chairman.
                     </p>
 
-                    <div className="flex  space-y-3 justify-center items-center p-5 rounded-xl bg-indigo-700/60 border-indigo-700/10 border  h-[17rem]">
+                    <div  className="flex  space-y-3 justify-center items-center p-5 rounded-xl bg-indigo-700/60 border-indigo-700/10 border  h-[17rem]">
                         <motion.p
                             style={{ scaleX: x }}
-                            className="lg:text-[3.5rem] xl:text-[4.6rem] text-4xl max-md:flex flex-col space-x-2  lg:space-x-5 text-center font-semibold"
+                            className="lg:text-[3.5rem] xl:text-[4.6rem] text-5xl max-md:flex flex-col space-x-2  lg:space-x-5 text-center font-semibold"
                         >
                             {text.split(" ").map((word, index) => {
                                 return (
