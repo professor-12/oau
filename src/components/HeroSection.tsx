@@ -4,7 +4,8 @@
 // import Image from "next/image";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import useTextAnimation, { listofWords } from "@/hooks/useTextAnimation";
+import useTextAnimation from "@/hooks/useTextAnimation";
+import { listofWords } from "@/constants";
 
 const HeroSection = () => {
     const containerVariants = {
@@ -22,8 +23,8 @@ const HeroSection = () => {
         visible: { opacity: 1, y: 0 },
     };
 
-    const text = useTextAnimation(listofWords, 7000);
-    const { scrollYProgress, scrollY } = useScroll();
+    const text = useTextAnimation(listofWords, 5000);
+    const { scrollY } = useScroll();
     const x = useTransform(scrollY, [0, 400], [1, 0.01]);
 
     return (
@@ -42,7 +43,7 @@ const HeroSection = () => {
                         Obafemi Awolowo University (OAU) in Ile-Ife, Nigeria, was established in 1961-62 based on recommendations from a 1959 educational commission led by Sir Eric Ashby. The University’s Provisional Council was formally inaugurated on June 8, 1961, with Chief Rotimi Williams as chairman.
                     </p>
 
-                    <div  className="flex  space-y-3 justify-center items-center p-5 rounded-xl bg-indigo-700/60 border-indigo-700/10 border  h-[17rem]">
+                    <div className="flex  space-y-3 justify-center items-center p-5 rounded-xl bg-indigo-700/60 border-indigo-700/10 border  h-[17rem]">
                         <motion.p
                             style={{ scaleX: x }}
                             className="lg:text-[3.5rem] xl:text-[4.6rem] text-5xl max-md:flex flex-col space-x-2  lg:space-x-5 text-center font-semibold"
@@ -71,9 +72,7 @@ const HeroSection = () => {
                                 );
                             })}
                         </motion.p>
-                        {/* <span className="text-[6rem] text-center font-semibold">
-                            Great Ife
-                        </span> */}
+
                     </div>
                 </div>
             </div>

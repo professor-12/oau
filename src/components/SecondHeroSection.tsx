@@ -40,10 +40,10 @@ const SecondHeroSection = () => {
                         return (
                             <motion.div
                                 initial={{ y: 200, opacity: 0 }}
-                                // animate={{ y: 0, opacity: 1 }}
-                                whileInView={{ y: 0, opacity: 1, transition: { duration: .2, delay: index * .07 } }}
+
+                                whileInView={{ y: 0, opacity: [0.6, 1], transition: { duration: .2, delay: index * .04 } }}
                                 key={index}
-                                viewport={{ once: true, margin: "-200px" }}
+                                viewport={{ once: true, margin: "-100px", }}
                                 className="shadow border hover:scale-105 duration-500 transition-all cursor-default rounded-lg"
                             >
                                 <div className="relative">

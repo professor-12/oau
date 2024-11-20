@@ -16,7 +16,7 @@ const ForgotPassword = () => {
             <>
                   <span onClick={handleOpenModal} className='text-xs cursor-pointer text-blue-500 text-right block'>Forgot Password?</span>
                   {
-                        openModal && <Modal onPress={handleCloseModal}>
+                        openModal && <Modal  onPress={handleCloseModal}>
                               <ForgotPasswordModal />
                         </Modal>
                   }

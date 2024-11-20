@@ -1,3 +1,10 @@
+export const listofWords = [
+    "Learning and Culture",
+    "Africa's most beautiful Campus",
+    "Great Citadel of Learning",
+    "Gateway to the University",
+];
+
 export const footerLink = [
     {
         title: "Students",
