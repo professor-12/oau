@@ -1,0 +1,24 @@
+.animate-track {
+    animation: track 30s linear infinite;
+}
+
+.animate-track-down {
+    animation: track 30s linear infinite reverse;
+}
+
+@keyframes track {
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+.faded-border {
+    border: 5px solid;
+    border-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0)
+        )
+        1;
+    padding: 20px;
+}
