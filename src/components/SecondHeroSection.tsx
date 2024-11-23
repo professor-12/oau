@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 
 const studyAtOau = [
@@ -20,7 +20,7 @@ const studyAtOau = [
 const SecondHeroSection = () => {
 
     return (
-        <div className=" p-0 space-y-7 relative  bg-white  py-[4rem] bg-no-repeat object-cover w-full">
+        <div className=" p-0 space-y-7 relative  bg-white  py-[6rem] bg-no-repeat object-cover w-full">
             <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 200 }}
