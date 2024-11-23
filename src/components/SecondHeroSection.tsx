@@ -20,8 +20,7 @@ const studyAtOau = [
 const SecondHeroSection = () => {
 
     return (
-        <div className=" p-0 space-y-7 relative  bg-white  py-[6rem] bg-no-repeat object-cover w-full">
-            <Image src="/svg/Bg.svg" className="absolute -z-1" width={200} height={200} alt="" />
+        <div className=" p-0 space-y-7 relative  bg-white  py-[4rem] bg-no-repeat object-cover w-full">
             <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 200 }}
@@ -40,11 +39,11 @@ const SecondHeroSection = () => {
                         return (
                             <motion.div
                                 initial={{ y: 200, opacity: 0 }}
-                                // animate={{ y: 0, opacity: 1 }}
-                                whileInView={{ y: 0, opacity: 1, transition: { duration: .2, delay: index * .07 } }}
+
+                                whileInView={{ y: 0, opacity: [0.6, 1], transition: { duration: .2, delay: index * .04 } }}
                                 key={index}
-                                viewport={{ once: true, margin: "-200px" }}
-                                className="shadow border hover:scale-105 duration-500 transition-all cursor-default rounded-lg"
+                                viewport={{ once: true, margin: "-100px", }}
+                                className="shadow border hover:scale-105 duration-500 transition-all cursor-default rounded-xl overflow-hidden"
                             >
                                 <div className="relative">
                                     <Image
