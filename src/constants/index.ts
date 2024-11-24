@@ -96,3 +96,72 @@ export const faq = [
         answer: "Yes, DE Candidates are expected to forward their transcripts.",
     },
 ];
+
+export const studyAtOau = [
+    {
+        image: "/oautrends.jpg",
+        title: "Undergraduate Admissions",
+        body: "Whatever you want from your University experience, you will find it at Obafemi Awolowo University.Learn more about our Undergraduate Program.",
+    },
+    {
+        image: "/oauimage.jpeg",
+        title: "Graduate Admissions",
+        body: "Ready to prepare for professional life, boost your career, push yourself to new frontiers of knowledge by enrolling in any of our Postgraduate Programs.",
+    },
+    {
+        image: "/student-10-480x299.jpg",
+        title: "Continuing Education",
+        body: "We strive to reach out to diverse populations and varying student profiles with challenging, and rewarding programs to enhance employability and professionalism.",
+    },
+];
+
+export const navlinks = [
+    {
+        title: "Students",
+        links: [
+            { name: "Undergraduate", url: "/login/undergraduate" },
+            { name: "Post graduate", url: "/login/postgraduate" },
+            { name: "Executive MBA", url: "/login/mbalogin" },
+        ],
+    },
+    {
+        title: "Staff",
+        links: [
+            {
+                name: "Staff Login",
+                url: "/login/staff",
+            },
+            { name: "Bursary", url: "bursary" },
+        ],
+    },
+    {
+        title: "Quick Links",
+        links: [
+            {
+                name: "FAQ",
+                url: "/home/#faq",
+            },
+            { name: "Transcript", url: "/login/undergradaute" },
+            {
+                name: "Diploma",
+                url: "http://eportal.oauife.edu.ng/advertnformlgsdiploma.pdf",
+            },
+            {
+                name: "Change of course form",
+                url: "http://eportal.oauife.edu.ng/ChangeOfCourseForm2021.pdf",
+            },
+            {
+                name: "Computer Training",
+                url: "http://eportal.oauife.edu.ng/ChangeOfCourseForm2021.pdf",
+            },
+            {
+                name: "Medical Services",
+                url: "/health-center",
+            },
+            {
+                name: "Fill PG Starter form",
+                url: "http://eportal.oauife.edu.ng/ChangeOfCourseForm2021.pdf",
+            },
+        ],
+    },
+] as const;

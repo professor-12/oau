@@ -1,64 +1,12 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { animate, AnimatePresence, motion, useAnimate } from "framer-motion";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Logo from "./Logo";
-import { Menu, Notification } from "@/app/lib/svgs";
-import DropDownMenu from "./DropDownMenu";
 import Link from "next/link";
 import MobileNavMenu from "./MobileNavMenu";
+import { navlinks } from "@/constants";
 
-export const navlinks = [
-    {
-        title: "Students",
-        links: [
-            { name: "Undergraduate", url: "/login/undergraduate", },
-            { name: "Post graduate", url: "/login/postgraduate" },
-            { name: "Executive MBA", url: "/login/mbalogin" },
-        ],
-    },
-    {
-        title: "Staff",
-        links: [
-            {
-                name: "Staff Login",
-                url: "/login/staff",
-            },
-            { name: "Bursary", url: "bursary" },
 
-        ],
-    },
-    {
-        title: "Quick Links",
-        links: [
-            {
-                name: "FAQ",
-                url: "/home/#faq",
-            },
-            { name: "Transcript", url: "/login/undergradaute" },
-            {
-                name: "Diploma",
-                url: "http://eportal.oauife.edu.ng/advertnformlgsdiploma.pdf",
-            },
-            {
-                name: "Change of course form",
-                url: "http://eportal.oauife.edu.ng/ChangeOfCourseForm2021.pdf",
-            },
-            {
-                name: "Computer Training",
-                url: "http://eportal.oauife.edu.ng/ChangeOfCourseForm2021.pdf",
-            },
-            {
-                name: "Medical Services",
-                url: "/health-center",
-            },
-            {
-                name: "Fill PG Starter form",
-                url: "http://eportal.oauife.edu.ng/ChangeOfCourseForm2021.pdf",
-            },
-
-        ],
-    },
-] as const;
 
 const Header = () => {
     const [x, setX] = useState(null) as any
@@ -67,9 +15,9 @@ const Header = () => {
         setSelected(index)
         const dropDown = document.getElementById(`${index}rect`)!?.getBoundingClientRect().left
         setX(dropDown - leftPositionofWrappingDiv)
-    
+
     }
-    
+
     const [selected, setSelected] = useState<null | number>(null);
     return (
         <div className="bg-white/20   z-[9999] fixed  right-0 left-0 top-0 backdrop-blur-lg border border-slate-500/20 drop-shadow-lg text-black">
@@ -102,7 +50,7 @@ const Header = () => {
                         }
                         <AnimatePresence mode="wait">
                             {selected !== null &&
-                                <motion.div style={{ x, translateX: "-50%" }} id="d" animate={{ y: 0, opacity: 1 }} initial={{ y: 12, opacity: 0 }} exit={{ y: 12, opacity: 0 }} className="absolute transition-all duration-300  left-12 top-[calc(100%_+_2rem)] mx-auto max-w-full  p-4 text-center bg-neutral-100 border flex flex-col rounded-lg space-y-4 ">
+                                <motion.div style={{ x, translateX: "-50%" }} id="d" animate={{ y: 0, opacity: 1 }} initial={{ y: 12, opacity: 0 }} exit={{ y: 12, opacity: 0 }} className="absolute transition-all duration-300  left-12 top-[calc(100%_+_2rem)] mx-auto max-w-full  p-4 text-left bg-neutral-100 border flex flex-col rounded-lg space-y-4 ">
                                     {
                                         navlinks[selected].title &&
                                         <motion.div exit={{ x: 12, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="flex flex-col text-sm gap-3">

@@ -2,6 +2,7 @@
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import News from "@/components/News";
 import SecondHeroSection from "@/components/SecondHeroSection";
 import Stats from "@/components/Stats";
 import React from "react";
@@ -17,7 +18,10 @@ const Home = () => {
                   <HeroSection />
                   <SecondHeroSection />
                   <Stats />
-                  <div className="h-[30rem] bg-no-repeat bg-cover bg-[url('/oduduwa.jpg')] bg-center  -skew-y-1 bg-red-400"></div>
+                  <div className="h-[30rem] relative  bg-no-repeat bg-cover bg-[url('/oduduwa.jpg')] bg-center brightness-90 bg-red-400">
+                        <h1 className="text-[20rem] text-center font-extrabold text-white/50 text-balance tracking-[2rem]">OAU</h1>
+                  </div>
+                  <News />
                   <FAQ />
                   <Footer />
             </div>
