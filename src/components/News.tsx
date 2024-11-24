@@ -22,10 +22,10 @@ const News = () => {
 
       <div className='max-width my-4 grid grid-cols-4 *-border-neutral-300 gap-4'>
         <div className=' p-12 h-[20rem] rounded-2xl border-neutral-300 border'></div>
-        <div className=' p-12 h-[20rem] rounded-2xl border'></div>
-        <div className=' p-12 h-[20rem] rounded-2xl border'></div>
-        <div className=' p-12 h-[20rem] rounded-2xl border'></div>
-        <div className=' col-span-2 p-12 h-[20rem] rounded-2xl border'></div>
+        <div className=' p-12 h-[20rem] rounded-2xl border-neutral-300 border'></div>
+        <div className=' p-12 h-[20rem] rounded-2xl border-neutral-300 border'></div>
+        <div className=' p-12 h-[20rem] rounded-2xl border-neutral-300 border'></div>
+        <div className=' col-span-2 p-12 h-[20rem] border-neutral-300 rounded-2xl border'></div>
         <div className=' col-span-2 p-12 h-[20rem] rounded-2xl border'></div>
       </div>
     </section >
