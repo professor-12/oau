@@ -1,24 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css"
-import { Astloch } from "next/font/google"
-import Header from "@/components/Header";
 
-const geistSans = localFont({
-    src: "./fonts/GeistVF.woff",
-    variable: "--font-geist-sans",
-    weight: "100 900",
-});
-const geistMono = localFont({
-    src: "./fonts/GeistMonoVF.woff",
-    variable: "--font-geist-mono",
-    weight: "100 900",
-});
-const robotoslab = localFont({
-    src: "./fonts/RobotoSlab-Black.ttf",
-    variable: "--font-roboto-slab",
-    weight: "100 600",
-});
+
 
 
 
@@ -28,17 +12,14 @@ const Inter = localFont({
     weight: "100 900",
 });
 
-const abrilfatface = localFont({
-    src: "./fonts/AbrilFatface-Regular.ttf",
-    variable: "--font-abril",
-    weight: "100 900",
+
+
+const quicksand = localFont({
+    src: "./fonts/Quicksand-Regular.ttf",
+    variable: "--font-quicksand",
+    weight: "100 500",
 });
 
-const interVariable = localFont({
-    src: "./fonts/InterVariable.woff2",
-    variable: "--font-inter-var",
-    weight: "100  900",
-});
 export const metadata: Metadata = {
     title: {
         default: "Obafemi Awolowo",
@@ -55,11 +36,14 @@ export const metadata: Metadata = {
 
 };
 
-const quicksand = localFont({
-    src: "./fonts/Quicksand-Regular.ttf",
-    variable: "--font-quicksand",
-    weight: "100 500",
-});
+
+
+const grosek = localFont({ src: './fonts/grosek.woff2', variable: '--font-grosek' })
+//  New fonts
+
+
+
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -68,7 +52,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${interVariable.variable} ${quicksand.variable}  ${Inter.variable} ${abrilfatface.variable}   ${robotoslab.variable}  ${geistMono.variable} antialiased `}
+                className={`${quicksand.variable}   ${Inter.variable} ${grosek.variable} antialiased `}
             >
                 {children}
                 <div id="portal"></div>
