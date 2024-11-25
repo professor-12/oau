@@ -18,12 +18,12 @@ const Stats = () => {
                         {
                               stats.map(({ title, number }) => {
                                     return <div key={title} className='text-center space-y-3'>
-                                          <div className='text-4xl lg:text-7xl text-white/70 font-semibold'>
+                                          <div className='text-4xl lg:text-7xl text-white/90 font-semibold'>
 
                                                 <CompleteHook number={number} />
 
                                           </div>
-                                          <p className='lg:text-xl text-center'>{title}</p>
+                                          <p className='lg:text-xl text-center font-poppins'>{title}</p>
                                     </div>
                               })
                         }
