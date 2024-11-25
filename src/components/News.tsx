@@ -25,18 +25,17 @@ OAU Academic Research Excellence Awardee & Ambassador, Prof.Anthony Adegbulugbe 
 const News = () => {
   return (
     <section className='text-xl py-24 my-8'>
-      <h1 className='text-center text-slate-700 font-[family-name:var(--font-quicksand)] font-semibold  mb-10 text-5xl'>
+      <h1 className='text-center text-4xl text-slate-700 font-[family-name:var(--font-quicksand)] font-semibold  mb-10 md:absolutetext-5xl'>
         News and Events
       </h1>
-      <div className='max-width gap-12 animate-gradient flex   px-12 items-center h-[20rem] bg-left-top rounded-3xl bg-gradient-to-br bg-clip-padding from-blue-600  to-violet-400'>
+      <div className='max-width md:gap-12 gap-6 animate-gradient flex max-sm:flex-col max-md:py-12  px-5 md:px-12 items-center min-h-[20rem] bg-left-top rounded-3xl bg-gradient-to-br bg-clip-padding from-blue-600  to-violet-400'>
         <div className='text-balance flex-[2] flex items-center flex-col'>
-          <h1 className='text-white  lg:text-5xl font-semibold'>48th Convocation: Intention to Join the University Procession</h1>
+          <h1 className='text-white   lg:text-5xl font-semibold'>48th Convocation: Intention to Join the University Procession</h1>
           <p className='text-sm leading-5 mt-4 text-white'>48th Convocation: Intention to Join the University Procession The Ceremonials Committee invites members of staff interested in the processions for...</p>
-
         </div>
         <div className='flex-1 flex justify-end'>
           <Link href="https://oauife.edu.ng/48th-convocation-intention-to-join-the-university-procession/">
-            <button className='bg-white max-md:text-sm text-black p-3 px-5 rounded-xl'>Read More</button>
+            <button className='bg-white max-md:w-full max-md:text-sm text-black p-3 px-5 rounded-xl'>Read More</button>
           </Link>
         </div>
       </div>
