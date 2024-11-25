@@ -65,7 +65,7 @@ const News = () => {
                     <Image style={{ "position": "absolute", height: "100%", width: "100%", left: 0, top: 0, right: 0, bottom: 0, color: "transparent" }} src={image} alt="title" width={2000} className='absolute top-0  h-full bg-cover bg-center bottom-0 w-full left-0 right-0' height={2000} />
                   </div>
 
-                  <span className='absolute left-[50%] font-[family-name:var(--font-grosek)] font-medium -translate-y-[50%] -translate-x-[50%] z-[12] top-[200%] transition-all duration-500 group-hover:top-[50%] text-white w-full px-3 text-3xl text-center'>{title}</span>
+                  <span className='absolute left-[50%] font-[family-name:var(--font-grosek)] font-medium -translate-y-[50%] -translate-x-[50%] z-[12] top-[200%] transition-all duration-500 group-hover:top-[50%] text-white w-full px-3 text-3xl max-md:text-2xl text-center'>{title}</span>
                 </div>
               </Link>
 
