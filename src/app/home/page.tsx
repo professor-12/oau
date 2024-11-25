@@ -18,8 +18,8 @@ const Home = () => {
                   <HeroSection />
                   <SecondHeroSection />
                   <Stats />
-                  <div className="h-[30rem] bg-fixed relative  bg-no-repeat bg-cover bg-[url('/oduduwa.jpg')] bg-center brightness-90 bg-red-400">
-                        <h1 className="text-[20rem] text-center font-extrabold text-white/50 text-balance tracking-[2rem]">OAU</h1>
+                  <div className="h-[20rem] lg:h-[30rem] flex items-center justify-center bg-fixed relative  bg-no-repeat bg-cover bg-[url('/oduduwa.jpg')] bg-center brightness-90 bg-red-400">
+                        <h1 className=" xl:text-[20rem] text-[10rem] md:text-[15rem] text-center font-extrabold text-white/50 text-balance tracking-[2rem]">OAU</h1>
                   </div>
                   <News />
                   <FAQ />
