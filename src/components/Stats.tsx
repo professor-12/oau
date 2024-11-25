@@ -14,17 +14,17 @@ const stats = [
 const Stats = () => {
       return (
             <section className='py-12 bg-black/90 flex text-white justify-between'>
-                  <div className='max-width flex justify-between'>
+                  <div className='max-width flex flex-wrap lg:gap-24 gap-12 justify-center'>
                         {
                               stats.map(({ title, number }) => {
                                     return <div key={title} className='text-center space-y-3'>
-                                          <div className='text-7xl text-white/70 font-semibold'>
+                                          <div className='text-3xl lg:text-7xl text-white/70 font-semibold'>
                                                 {/* <CountUp duration={3}
                                                       decimal="," end={number as number} /> */}
                                                 <CompleteHook number={number} />
 
                                           </div>
-                                          <p className='text-xl text-center'>{title}</p>
+                                          <p className='lg:text-xl text-center'>{title}</p>
                                     </div>
                               })
                         }

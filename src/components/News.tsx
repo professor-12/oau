@@ -25,23 +25,23 @@ OAU Academic Research Excellence Awardee & Ambassador, Prof.Anthony Adegbulugbe 
 const News = () => {
   return (
     <section className='text-xl py-24 my-8'>
-      <h1 className='texgit t-center font-[family-name:var(--font-quicksand)] font-semibold  mb-10 text-5xl'>
+      <h1 className='text-center font-[family-name:var(--font-quicksand)] font-semibold  mb-10 text-5xl'>
         News and Event
       </h1>
-      <div className='max-width gap-12 animate-gradient flex  px-12 items-center h-[20rem] bg-left-top rounded-3xl bg-gradient-to-br bg-clip-padding from-blue-600  to-violet-400'>
+      <div className='max-width gap-12 animate-gradient flex   px-12 items-center h-[20rem] bg-left-top rounded-3xl bg-gradient-to-br bg-clip-padding from-blue-600  to-violet-400'>
         <div className='text-balance flex-[2] flex items-center flex-col'>
-          <h1 className='text-white text-5xl font-semibold'>48th Convocation: Intention to Join the University Procession</h1>
+          <h1 className='text-white  lg:text-5xl font-semibold'>48th Convocation: Intention to Join the University Procession</h1>
           <p className='text-sm leading-5 mt-4 text-white'>48th Convocation: Intention to Join the University Procession The Ceremonials Committee invites members of staff interested in the processions for...</p>
 
         </div>
         <div className='flex-1 flex justify-end'>
           <Link href="https://oauife.edu.ng/48th-convocation-intention-to-join-the-university-procession/">
-            <button className='bg-white text-black p-3 px-5 rounded-xl'>Read More</button>
+            <button className='bg-white max-md:text-sm text-black p-3 px-5 rounded-xl'>Read More</button>
           </Link>
         </div>
       </div>
 
-      <div className='max-width my-4 grid grid-cols-4 *-border-neutral-300 gap-4'>
+      <div className='max-width my-4 grid md:grid-cols-3 grid-cols-2 lg:grid-cols-4 *-border-neutral-300 gap-4'>
         {
           news.slice(0, 4).map(({ date, image, title, link }, index) => {
             return (
@@ -60,7 +60,7 @@ const News = () => {
         {
           news.slice(4, 6).map(({ date, title, image }, index) => {
             return (
-              <Link href={""} className='col-span-2' key={index}>
+              <Link href={""} className='w-full col-span-2' key={index}>
                 <div className='h-[20rem] bg-slate-600/20 col-span-2 relative  group rounded-2xl border-neutral-300 cursor-pointer border overflow-hidden'>
                   <div className='relative w-full h-full  group-hover:brightness-[.3] transition-all duration-150'>
                     <Image style={{ "position": "absolute", height: "100%", width: "100%", left: 0, top: 0, right: 0, bottom: 0, color: "transparent" }} src={image} alt="title" width={2000} className='absolute top-0  h-full bg-cover bg-center bottom-0 w-full left-0 right-0' height={2000} />

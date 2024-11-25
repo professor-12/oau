@@ -10,7 +10,7 @@ const HeroSection = () => {
                         Obafemi Awolowo University (OAU) in Ile-Ife, Nigeria, was established in 1961-62 based on recommendations from a 1959 educational commission led by Sir Eric Ashby. The University’s Provisional Council was formally inaugurated on June 8, 1961, with Chief Rotimi Williams as chairman.</p>
                 </div>
 
-                <div className="overflow-hidden w-full flex-1 pt-[calc(80px-10px)]  h-screen">
+                <div className="overflow-hidden w-full flex-1 pt-[calc(80px-10px)]  min-h-screen">
                     <SlideImage />
                 </div>
 
