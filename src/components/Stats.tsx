@@ -54,17 +54,19 @@ const CompleteHook = ({ number }: { number: number }) => {
             ref: countUpRef,
             start: 0,
             end: number,
-            delay: 1000,
+            delay: 1500,
             duration: 1,
       });
       useEffect(() => {
+            const coutupel = document.querySelector("#countup")
+            if (!coutupel || coutupel == null) return;
             inter = new IntersectionObserver((e) => e.forEach((el) => { if (el.isIntersecting) { pauseResume() } }))
-            inter.observe(countUpRef.current)
-            return () => inter.unobserve(countUpRef.current)
+            inter.observe(coutupel as Element)
+            return () => inter.unobserve(coutupel as Element)
       }, [])
       return (
             <div className='w-full'>
-                  <span ref={countUpRef} />
+                  <span ref={countUpRef} id="countup" />
                   {/* <button onClick={start}>Start</button> */}
                   {/* <button onClick={reset}>Reset</button> */}
                   {/* <button onClick={pauseResume}>Pause/Resume</button> */}

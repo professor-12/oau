@@ -15,7 +15,7 @@ const SlideImage = () => {
 
                               images.map((a) => {
                                     return (
-                                          <div className='rounded-2xl max-m  bg-slate-400 overflow-hidden relative min-w-[18rem] object-cover h-[20rem] shadow'>
+                                          <div className='rounded-2xl  bg-slate-400 overflow-hidden relative w-[18rem] object-cover h-[20rem] shadow'>
                                                 <Image src={a} className='absolute w-full h-full top-0 left-0 bottom-0' alt="slide images" width={500} height={500} />
                                           </div>
                                     )
@@ -25,7 +25,7 @@ const SlideImage = () => {
 
                               images.map((a) => {
                                     return (
-                                          <div className='rounded-2xl bg-slate-400 overflow-hidden relative min-w-[18rem] object-cover h-[20rem] shadow'>
+                                          <div className='rounded-2xl bg-slate-400 overflow-hidden relative w-[18rem] object-cover h-[20rem] shadow'>
                                                 <Image src={a} className='absolute w-full h-full top-0 left-0 bottom-0' alt="slide images" width={500} height={500} />
                                           </div>
                                     )
@@ -38,7 +38,7 @@ const SlideImage = () => {
 
                               images2.map((a) => {
                                     return (
-                                          <div className='rounded-2xl bg-slate-400 overflow-hidden relative min-w-[18rem] object-cover h-[20rem] shadow'>
+                                          <div className='rounded-2xl bg-slate-400 overflow-hidden relative w-[18rem] object-cover h-[20rem] shadow'>
                                                 <Image src={a} className='absolute w-full h-full top-0 left-0 bottom-0' alt="slide images" width={500} height={500} />
                                           </div>
                                     )
