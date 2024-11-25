@@ -25,12 +25,12 @@ const SecondHeroSection = () => {
                     className="grid gap-6 lg:grid-cols-3 lg:px-12"
                 >
 
-                    {studyAtOau.map(({ body, image, title }, index) => {
+                    {studyAtOau.map(({ body, image, title, link }, index) => {
                         return (
-                            <Link href={""} key={index}>
+                            <Link href={link} key={index}>
                                 <motion.div
 
-                                    className="shadow border hover:scale-105 duration-500 transition-all cursor-default rounded-xl overflow-hidden"
+                                    className="shadow  border hover:scale-105 duration-500 transition-all cursor-pointer rounded-xl overflow-hidden"
                                 >
                                     <div className="relative">
                                         <Image

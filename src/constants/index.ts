@@ -100,16 +100,19 @@ export const faq = [
 export const studyAtOau = [
     {
         image: "/oautrends.jpg",
+        link: "https://oauife.edu.ng/students/",
         title: "Undergraduate Admissions",
         body: "Whatever you want from your University experience, you will find it at Obafemi Awolowo University.Learn more about our Undergraduate Program.",
     },
     {
         image: "/oauimage.jpeg",
         title: "Graduate Admissions",
+        link: "https://oauife.edu.ng/admission-postgraduate-studies/",
         body: "Ready to prepare for professional life, boost your career, push yourself to new frontiers of knowledge by enrolling in any of our Postgraduate Programs.",
     },
     {
         image: "/student-10-480x299.jpg",
+        link: "http://oaucdl.edu.ng/",
         title: "Continuing Education",
         body: "We strive to reach out to diverse populations and varying student profiles with challenging, and rewarding programs to enhance employability and professionalism.",
     },

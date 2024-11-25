@@ -1,10 +1,28 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+const news = [
+  {
+    image: "/news-image0.jpeg", title: `You are cordially invited to join the University as we celebrate our 48th Convocation Ceremony
+ November 19, 2024`, date: "November 24 2024"
+  },
+  {
+    image: "/news-image7.jpeg", title: `Faculty of Agriculture 13th Faculty Lecture & Awards
+ November 4, 2024`, date: "November 24 2024"
+  },
+  {
+    image: "/news-image4.jpeg", title: `Obafemi Awolowo University Celebrates Professor Celestine Iwendi’s Promotion to Professor of AI at the University of Bolton`, date: "November 24 2024"
+  },
+  { image: "/news-image3.jpeg", title: `THE UNIVERSITY ADVANCEMENT OFFICE PRESENTS ISE 2.0`, date: "November 24 2024" },
+  { image: "/news-image8.jpg", title: "The 2024 Mega Innovative Bootcamp: A Showcase of Youth Research Facilitators’ Skills and Innovation", date: "November 24 2024" },
+  { image: "/news-image9.jpg", title: "TETFUND Project Inception Meeting: Advancing Political Inclusion for Persons with Disabilities in Nigeria", date: "November 24 2024" },
+
+]
 const News = () => {
   return (
     <section className='text-xl py-24 my-8'>
-      <h1 className='text-center mb-8 text-4xl font-medium'>
+      <h1 className='text-center mb-10 text-5xl font-semibold'>
         News and Event
       </h1>
       <div className='max-width gap-12 animate-gradient flex  px-12 items-center h-[20rem] bg-left-top rounded-3xl bg-gradient-to-br bg-clip-padding from-blue-600  to-violet-400'>
@@ -21,12 +39,38 @@ const News = () => {
       </div>
 
       <div className='max-width my-4 grid grid-cols-4 *-border-neutral-300 gap-4'>
-        <div className=' p-12 h-[20rem] rounded-2xl border-neutral-300 border'></div>
-        <div className=' p-12 h-[20rem] rounded-2xl border-neutral-300 border'></div>
-        <div className=' p-12 h-[20rem] rounded-2xl border-neutral-300 border'></div>
-        <div className=' p-12 h-[20rem] rounded-2xl border-neutral-300 border'></div>
-        <div className=' col-span-2 p-12 h-[20rem] border-neutral-300 rounded-2xl border'></div>
-        <div className=' col-span-2 p-12 h-[20rem] rounded-2xl border'></div>
+        {
+          news.slice(0, 4).map(({ date, image, title }, index) => {
+            return (
+              <Link href={""} key={index}>
+                <div className='relative rounded-2xl border-neutral-300  overflow-hidden'>
+                  <div className='relative w-full bg-slate-600/20 overflow-hidden rounded-2xl min-h-[15rem]  duration-150'>
+                    <Image style={{ "position": "absolute", height: "100%", width: "100%", left: 0, top: 0, right: 0, bottom: 0, color: "transparent" }} src={image} alt="title" width={1000} className='absolute top-0  bg-cover bg-center bottom-0 left-0 right-0' height={1000} />
+                  </div>
+                  <p className='text-black  px-0 text-sm text-left p-3'>{title}</p>
+                </div>
+              </Link>
+
+            )
+          })
+        }
+        {
+          news.slice(4, 6).map(({ date, title, image }, index) => {
+            return (
+              <Link href={""} className='col-span-2' key={index}>
+                <div className='h-[20rem] bg-slate-600/20 col-span-2 relative  group rounded-2xl border-neutral-300 cursor-pointer border overflow-hidden'>
+                  <div className='relative w-full h-full  group-hover:brightness-[.3] transition-all duration-150'>
+                    <Image style={{ "position": "absolute", height: "100%", width: "100%", left: 0, top: 0, right: 0, bottom: 0, color: "transparent" }} src={image} alt="title" width={2000} className='absolute top-0  h-full bg-cover bg-center bottom-0 w-full left-0 right-0' height={2000} />
+                  </div>
+
+                  <span className='absolute left-[50%] font-medium -translate-y-[50%] -translate-x-[50%] z-[12] top-[200%] transition-all duration-500 group-hover:top-[50%] text-white w-full px-3 text-3xl text-center'>{title}</span>
+                </div>
+              </Link>
+
+            )
+          })
+        }
+
       </div>
     </section >
   )

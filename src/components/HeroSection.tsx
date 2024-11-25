@@ -2,7 +2,7 @@ import React from "react";
 import SlideImage from "./SlideImage";
 const HeroSection = () => {
     return (
-        <div className="h-screen relative text-black">
+        <div className="h-screen relative bg-[#F9FAFB] text-black">
             <div className="w-[88%] mx-auto relative  items-center  flex justify-between  gap-24">
                 <div className="flex-1 space-y-4">
                     <h2 className="text-6xl font-semibold">Obafemi Awolowo University</h2>

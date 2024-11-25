@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import Modal from './Modal/modal'
 import { AnimatePresence, motion } from "framer-motion"
-import { navlinks } from './Header'
 import Link from 'next/link'
+import { navlinks } from '@/constants'
 const MobileNavMenu = () => {
       const [active, setActive] = useState(!true)
 

@@ -13,12 +13,12 @@ const stats = [
 ]
 const Stats = () => {
       return (
-            <section className='py-12 bg-black/80 flex text-white justify-between'>
+            <section className='py-12 bg-black/90 flex text-white justify-between'>
                   <div className='max-width flex justify-between'>
                         {
                               stats.map(({ title, number }) => {
                                     return <div key={title} className='text-center space-y-3'>
-                                          <div className='text-7xl text-blue-400 font-semibold'>
+                                          <div className='text-7xl text-white/70 font-semibold'>
                                                 {/* <CountUp duration={3}
                                                       decimal="," end={number as number} /> */}
                                                 <CompleteHook number={number} />

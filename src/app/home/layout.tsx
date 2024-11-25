@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const layout = ({ children }: PropsWithChildren) => {
       return (
-            <div>
+            <div className='bg-[#F9FAFB]'>
                   <Header />
                   {children}
             </div>
