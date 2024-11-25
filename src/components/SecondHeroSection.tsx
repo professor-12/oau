@@ -30,7 +30,7 @@ const SecondHeroSection = () => {
                             <Link href={link} key={index}>
                                 <motion.div
 
-                                    className="shadow  border hover:scale-105 duration-500 transition-all cursor-pointer rounded-xl overflow-hidden"
+                                    className="border hover:scale-105 duration-500 transition-all cursor-pointer rounded-xl overflow-hidden"
                                 >
                                     <div className="relative">
                                         <Image

@@ -14,7 +14,7 @@ const stats = [
 const Stats = () => {
       return (
             <section className='py-12 bg-black/90 flex text-white justify-between'>
-                  <div className='max-width flex max-md:flex-col lg:gap-24 gap-12 justify-center'>
+                  <div className='max-width flex max-md:flex-col flex-wrap lg:gap-24 gap-12 justify-center'>
                         {
                               stats.map(({ title, number }) => {
                                     return <div key={title} className='text-center space-y-3'>
