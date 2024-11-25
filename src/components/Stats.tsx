@@ -14,13 +14,12 @@ const stats = [
 const Stats = () => {
       return (
             <section className='py-12 bg-black/90 flex text-white justify-between'>
-                  <div className='max-width flex flex-wrap lg:gap-24 gap-12 justify-center'>
+                  <div className='max-width flex max-md:flex-col lg:gap-24 gap-12 justify-center'>
                         {
                               stats.map(({ title, number }) => {
                                     return <div key={title} className='text-center space-y-3'>
-                                          <div className='text-3xl lg:text-7xl text-white/70 font-semibold'>
-                                                {/* <CountUp duration={3}
-                                                      decimal="," end={number as number} /> */}
+                                          <div className='text-4xl lg:text-7xl text-white/70 font-semibold'>
+
                                                 <CompleteHook number={number} />
 
                                           </div>
@@ -35,23 +34,13 @@ const Stats = () => {
 
 export default Stats
 
-// COLLEGES
-// 13
-// FACULTIES
-// 
-// 
-// 
-// 
-// 32, 480
-// STUDENTS
-
-
 
 const CompleteHook = ({ number }: { number: number }) => {
       let inter: IntersectionObserver;
       const countUpRef = React.useRef(null) as any;
       const { pauseResume } = useCountUp({
             ref: countUpRef,
+
             start: 0,
             end: number,
             delay: 1500,
@@ -67,10 +56,6 @@ const CompleteHook = ({ number }: { number: number }) => {
       return (
             <div className='w-full'>
                   <span ref={countUpRef} id="countup" />
-                  {/* <button onClick={start}>Start</button> */}
-                  {/* <button onClick={reset}>Reset</button> */}
-                  {/* <button onClick={pauseResume}>Pause/Resume</button> */}
-                  {/* <button onClick={() => update(2000)}>Update to 2000</button> */}
             </div>
       );
 };

@@ -8,7 +8,7 @@ export const images2 = ['/oauimage(2).png', '/image.png', '/oau-bg.jpg']
 const SlideImage = () => {
 
       return (
-            <div className='flex gap-5 overflow-clip'>
+            <div className='flex max-md:hidden gap-5 overflow-clip'>
 
                   <div style={{}} className='flex animate-track gap-7 flex-col h-full'>
                         {
@@ -63,3 +63,33 @@ const SlideImage = () => {
 }
 
 export default SlideImage
+
+
+
+export const SlideImageMobile = () => {
+
+      return <div style={{}} className='flex md:hidden  animate-track-x gap-7  h-full'>
+            {
+
+                  images.map((a) => {
+                        return (
+                              <div className='rounded-2xl flex-shrink-0  bg-slate-400 overflow-hidden relative w-full object-cover h-[20rem] shadow'>
+                                    <Image src={a} className='absolute w-full h-full top-0 left-0 bottom-0' alt="slide images" width={500} height={500} />
+                              </div>
+                        )
+                  })
+            }
+            {
+
+                  images.map((a) => {
+                        return (
+                              <div className='rounded-2xl  flex-shrink-0  bg-slate-400 overflow-hidden relative w-full object-cover h-[20rem] shadow'>
+                                    <Image src={a} className='absolute w-full h-full top-0 left-0 bottom-0' alt="slide images" width={500} height={500} />
+                              </div>
+                        )
+                  })
+            }
+
+      </div>
+
+}

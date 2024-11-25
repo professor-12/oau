@@ -29,6 +29,9 @@
     animation: gradient 5s ease-in-out infinite alternate;
 }
 
+.animate-track-x {
+    animation: trackX 10s linear infinite;
+}
 @keyframes gradient {
     0% {
         background-position: left;
@@ -38,5 +41,11 @@
     } */
     100% {
         background-position: right;
+    }
+}
+
+@keyframes trackX {
+    to {
+        transform: translateX(-427%);
     }
 }
