@@ -30,7 +30,7 @@
 }
 
 .animate-track-x {
-    animation: trackX 10s linear infinite;
+    animation: trackX 20s linear infinite;
 }
 @keyframes gradient {
     0% {
