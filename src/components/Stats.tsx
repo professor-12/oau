@@ -18,12 +18,12 @@ const Stats = () => {
                         {
                               stats.map(({ title, number }) => {
                                     return <div key={title} className='text-center space-y-3'>
-                                          <div className='text-4xl lg:text-7xl text-white/70 font-semibold'>
+                                          <div className='text-4xl lg:text-7xl text-white/90 font-semibold'>
 
                                                 <CompleteHook number={number} />
 
                                           </div>
-                                          <p className='lg:text-xl text-center'>{title}</p>
+                                          <p className='lg:text-xl text-center font-poppins'>{title}</p>
                                     </div>
                               })
                         }
@@ -40,9 +40,8 @@ const CompleteHook = ({ number }: { number: number }) => {
       const countUpRef = React.useRef(null) as any;
       const { pauseResume } = useCountUp({
             ref: countUpRef,
-
             start: 0,
-            end: number,
+            end: number ?? 0,
             delay: 1500,
             duration: 1,
       });
@@ -52,7 +51,7 @@ const CompleteHook = ({ number }: { number: number }) => {
             inter = new IntersectionObserver((e) => e.forEach((el) => { if (el.isIntersecting) { pauseResume() } }))
             inter.observe(coutupel as Element)
             return () => inter.unobserve(coutupel as Element)
-      }, [])
+      }, [pauseResume])
       return (
             <div className='w-full'>
                   <span ref={countUpRef} id="countup" />

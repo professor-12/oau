@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css"
-import { Poppins } from "next/font/google"
+import { Poppins, Montserrat } from "next/font/google"
 
 
-const poppins = Poppins({ weight: '500', subsets: ["latin"] })
+const poppins = Poppins({ weight: '400', subsets: ["latin"], variable: '--font-poppins' })
 
 const Inter = localFont({
     src: "./fonts/Inter.woff2",
     variable: "--font-inter",
-    weight: "100 900",
+    weight: "300 600",
 });
 
 
 
+const montserrat = Montserrat({ weight: "500", variable: '--font-monserat', subsets: ["latin"] })
+
 const quicksand = localFont({
     src: "./fonts/Quicksand-Regular.ttf",
     variable: "--font-quicksand",
-    weight: "100 500",
+    weight: "300 900",
 });
 
 export const metadata: Metadata = {
@@ -42,10 +44,6 @@ const grosek = localFont({ src: './fonts/grosek.woff2', variable: '--font-grosek
 //  New fonts
 
 
-
-
-console.log()
-
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -54,7 +52,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${quicksand.variable} ${poppins.className}   ${Inter.variable} ${grosek.variable} antialiased `}
+                className={`${quicksand.variable} ${poppins.variable} ${montserrat.variable}   ${Inter.variable} ${grosek.variable} antialiased `}
             >
                 {children}
                 <div id="portal"></div>

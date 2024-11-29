@@ -39,7 +39,7 @@ const DropDownTrigger = ({ index, question, answer }: { index: number, question:
 
       return <motion.div className='mx-auto border-t-2 border-black/400 px-12 overflow-hidden transition-all duration-700'>
             <div onClick={() => setActive(prev => { return prev == index ? null : index })} className='cursor-pointer gap-4 flex items-center justify-between py-5 md:py-8'>
-                  <h1 className='md:text-xl'>{question}</h1>
+                  <h1 className='md:text-xl font-medium'>{question}</h1>
                   <div className="h-12">
                         <svg
                               className={`${active === index ? "" : "rotate-180"} duration-200 transition-all text-3xl`}

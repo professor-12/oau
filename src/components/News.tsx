@@ -25,7 +25,7 @@ OAU Academic Research Excellence Awardee & Ambassador, Prof.Anthony Adegbulugbe 
 const News = () => {
   return (
     <section className='text-xl py-24 my-8'>
-      <h1 className='text-center text-4xl text-slate-700 font-[family-name:var(--font-quicksand)] font-semibold  mb-10 md:absolutetext-5xl'>
+      <h1 className='text-center  text-4xl text-slate-700 font-quicksand font-medium  mb-10 md:absolutetext-5xl'>
         News and Events
       </h1>
       <div className='max-width md:gap-12 gap-6 animate-gradient flex max-sm:flex-col max-md:py-12  px-5 md:px-12 items-center min-h-[20rem] bg-left-top rounded-3xl bg-gradient-to-br bg-clip-padding from-blue-600  to-violet-400'>

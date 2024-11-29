@@ -6,6 +6,7 @@
     animation: track 30s linear infinite reverse;
 }
 
+
 @keyframes track {
     to {
         transform: translateY(-50%);

@@ -19,3 +19,19 @@ body {
     font-family: var(--font-inter);
     scroll-behavior: smooth;
 }
+
+.fade-up {
+    animation: fade-up 0.2s ease-in forwards;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translatey(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
