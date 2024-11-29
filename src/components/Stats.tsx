@@ -36,25 +36,10 @@ export default Stats
 
 
 const CompleteHook = ({ number }: { number: number }) => {
-      let inter: IntersectionObserver;
-      const countUpRef = React.useRef(null) as any;
-      const { pauseResume } = useCountUp({
-            ref: countUpRef,
-            start: 0,
-            end: number ?? 0,
-            delay: 1500,
-            duration: 1,
-      });
-      useEffect(() => {
-            const coutupel = document.querySelector("#countup")
-            if (!coutupel || coutupel == null) return;
-            inter = new IntersectionObserver((e) => e.forEach((el) => { if (el.isIntersecting) { pauseResume() } }))
-            inter.observe(coutupel as Element)
-            return () => inter.unobserve(coutupel as Element)
-      }, [pauseResume])
+
       return (
             <div className='w-full'>
-                  <span ref={countUpRef} id="countup" />
+                  <span id="countup">{number}</span>
             </div>
       );
 };
