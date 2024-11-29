@@ -15,7 +15,7 @@ const Home = () => {
                   <HeroSection />
                   <SecondHeroSection />
                   <Stats />
-                  <div className="h-[20rem] max-sm:hidden lg:h-[30rem] flex items-center justify-center bg-fixed relative  bg-no-repeat bg-cover bg-[url('/oduduwa.jpg')] bg-center brightness-90 bg-red-400">
+                  <div className="h-[20rem] max-sm:hidden lg:h-[30rem] flex items-center justify-center bg-fixed relative  bg-no-repeat bg-cover bg-[url('/oduduwa.jpg')] bg-center brightness-90">
                   </div>
                   <News />
                   <FAQ />
