@@ -42,7 +42,7 @@ const DropDownTrigger = ({ index, question, answer }: { index: number, question:
                   <h1 className='md:text-xl font-medium'>{question}</h1>
                   <div className="h-12">
                         <svg
-                              className={`${active === index ? "" : "rotate-180"} duration-200 transition-all text-3xl`}
+                              className={`${active === index ? "" : "rotate-180"} duration-200 transition-all text-xl lg:text-3xl`}
                               stroke="currentColor"
                               fill="currentColor"
                               stroke-width="0"
@@ -59,7 +59,7 @@ const DropDownTrigger = ({ index, question, answer }: { index: number, question:
             <motion.div
                   animate={{ height: active === index ? "auto" : 0 }}
                   transition={{ duration: .3, ease: "easeInOut" }}
-                  style={{ overflow: "hidden" }} ><p className="text-lg py-4  text-slate-700">{answer}</p>
+                  style={{ overflow: "hidden" }} ><p className="lg:text-lg py-4  text-slate-600">{answer}</p>
             </motion.div>
       </motion.div>
 }
