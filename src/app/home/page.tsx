@@ -1,4 +1,3 @@
-// import AboutUs from "@/components/AboutUs";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";

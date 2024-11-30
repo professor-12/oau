@@ -95,7 +95,7 @@ export const faq = [
             "Are Direct Entry (DE) Required to forward their Transcript to the Registrar of the institution?",
         answer: "Yes, DE Candidates are expected to forward their transcripts.",
     },
-];
+] as const;
 
 export const studyAtOau = [
     {
