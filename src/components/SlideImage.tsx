@@ -73,7 +73,7 @@ export const SlideImageMobile = () => {
 
                   images.map((a) => {
                         return (
-                              <div className='rounded-2xl flex-shrink-0  bg-slate-300 overflow-hidden relative w-[80%] object-cover  h-[17rem] shadow'>
+                              <div className='rounded-2xl flex-shrink-0  bg-gray-200 overflow-hidden relative w-[80%] object-cover  h-[17rem] shadow'>
                                     <Image src={a} className='absolute w-full h-full top-0 left-0 bottom-0 object-cover object-center' alt="slide images" width={500} height={500} />
                               </div>
                         )
@@ -83,7 +83,7 @@ export const SlideImageMobile = () => {
 
                   images.map((a) => {
                         return (
-                              <div className='rounded-2xl  flex-shrink-0  bg-slate-300 overflow-hidden relative w-[80%] object-cover h-[17rem] shadow'>
+                              <div className='rounded-2xl  flex-shrink-0  bg-gray-200 overflow-hidden relative w-[80%] object-cover h-[17rem] shadow'>
                                     <Image src={a} className='absolute w-full h-full top-0 left-0 bottom-0 object-cover object-center' alt="slide images" width={500} height={500} />
                               </div>
                         )
